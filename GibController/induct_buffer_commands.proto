@@ -1,0 +1,331 @@
+// Note we use proto3 so we can more easily generate C# client code,
+// where the only supported libraries are proto3.
+syntax = "proto3";
+
+// nedlecky had to comment out cc_api_version line below
+// option cc_api_version = 2;
+
+// nedlecky added namespace definition for C# below
+option csharp_namespace = "GIBController";
+
+// Contains protos for communicating back and forth with an induct buffer.
+package platforms.automation.hippasus.induct_buffer;
+
+import "google/protobuf/timestamp.proto";
+
+// Identification for a particular induct buffer.
+message Identification {
+  // A unique identifier for this message.
+  string message_id = 1;
+  // Unique physical identifier for the buffer.
+  string buffer_id = 2;
+  // The software version running on the buffer.
+  string software_version = 3;
+  // Tote capacity of the buffer.
+  int32 capacity = 4;
+  // When the physical GIB machine was brought online.
+  google.protobuf.Timestamp boot_time = 5;
+  // Current system time on physical controller of the GIB.
+  google.protobuf.Timestamp current_system_time = 6;
+}
+
+enum ZonePresence {
+  ZONE_PRESENCE_UNKNOWN = 0;
+  EMPTY = 1;
+  OCCUPIED = 2;
+}
+
+enum PresenceEventType {
+  PRESENCE_EVENT_TYPE_UNKNOWN = 0;
+  TOTE_ARRIVED = 1;
+  TOTE_DEPARTED = 2;
+}
+
+// Finer grained error details of an operation.
+enum ResultCode {
+  UNKNOWN_RESULT_CODE = 0;
+  // Result was successful.
+  OK = 1;
+  // No capacity to move the tote to the desired location.
+  NO_CAPACITY = 2;
+  // No tote was available to process at desired location.
+  NOT_PRESENT = 3;
+  // A tote with the given ID was already loaded.
+  TOTE_ALREADY_PRESENT = 4;
+  // The tote present didn't have the requested ID
+  TOTE_ID_MISMATCH = 5;
+  // No AGV was available to complete the action.
+  NO_AGV = 6;
+  // The operation wasn't completed within the expected time by the PLC
+  // (i.e. the PLC thinks a tote is stuck).
+  TIMEOUT = 7;
+  // A command is already being executed bythe PLC.
+  COMMAND_ALREADY_EXECUTING = 8;
+  // The hardware is not operational for some reason.
+  HARDWARE_FAULT = 9;
+  // There are too many totes on the conveyor to complete the operation.
+  MULTIPLE_TOTES = 10;
+  // The machine isn't in the right state to accept
+  // this command, but is not in a fault (e.g. a conveyor is
+  // already rolling and we expect it to stop first).
+  BAD_STATE = 11;
+  // The request as structured is invalid.
+  INVALID_REQUEST = 12;
+  // Something interrupted the command (e.g. someone
+  // placed a tote on the dock when the conveyor was
+  // running).
+  COMMAND_INTERRUPTED = 13;
+}
+
+// Event for changes when a tote is or is not at a dock.
+message DockEvent {
+  // A unique identifier for this message.
+  string message_id = 1;
+  // The time the event was detected.
+  google.protobuf.Timestamp change_time = 2;
+  //  Whether a tote arrived or left the dock.
+  PresenceEventType tote_presence = 3;
+}
+
+// Ask the Induct buffer to load a tote from a docked agv, this simply starts
+// the conveyor.  Arrival (and conveyor stoppage) is confirmed by a DockEvent.
+// Internally, the GIB will have a timeout for when to stop the motor if nothing
+// arrives, this will be long (order of minutes) and will silently fail if
+// nothing arrives.
+message AcceptToteFromAgvRequest {
+  // A unique identifier for this message
+  string message_id = 1;
+}
+
+// The result of AcceptToteFromAgvRequest request.
+message AcceptToteFromAgvResult {
+  // The message id of the request that this is a result of.
+  string message_id = 1;
+  // Result of the operation.
+  ResultCode result_code = 2;
+}
+
+// Contents of a slot as detected from imaging and other sensors.
+message SlotContent {
+  // Slot ID this contents refers to. See http://shortn/_Vxd3smNENI for
+  // a reference on tote IDs
+  string slot_id = 1;
+
+  enum Contents {
+    CONTENTS_UNKNOWN = 0;
+    EMPTY = 1;
+    NON_EMPTY = 2;
+  }
+  Contents contents = 2;
+
+  message BarCode {
+    string bar_code = 1;
+    // Angle in degees of the bar-code (0 degrees is direction away from
+    // the induct buffer on the conveyor).
+    double theta = 2;
+  }
+  // Bar codes detected in the slot.
+  repeated BarCode bar_codes = 3;
+}
+
+enum ToteContentsType {
+  TOTE_CONTENTS_TYPE_UNKNOWN = 0;
+  // Universal tote with 20 hard-drive capacity dunnage specifically used
+  // for robotech.
+  ROBOTECH_TOTE = 1;
+}
+
+// Results of inspecting/scanning a tote.
+message ScanResult {
+  // The bar_code read from the side of the tote.
+  string bar_code = 1;
+  // The configuration of the tote dunange.
+  ToteContentsType tote_contents_type = 2;
+  // An entry for each slot.
+  repeated SlotContent slot_contents = 3;
+}
+
+// Request to load a tote from the conveyor into the buffer.  This will
+// return once the tote reaches its final resting place.
+message SendToBufferRequest {
+  // A unique identifier for this message.
+  string message_id = 1;
+  // An identifier for the tote.
+  string tote_id = 2;
+  // A hint for how likely the tote will need to be retrieved from the buffer.
+  // Valid range is from 0 to buffer capacity (inclusive).  0 is the highest
+  // priority (tote will be removed the soonest).
+  int32 access_priority = 3;
+
+  // If the tote happened to be scanned as part of processing the request
+  // this will contain the results.
+  ScanResult result = 4;
+}
+
+// Result of SendToBufferRequest.
+message SendToBufferResult {
+  // A unique identifier for this message.
+  string message_id = 1;
+
+  // Result of operation.
+  ResultCode result_code = 2;
+
+  // The location the tote was stored at if it happened successfully.  This
+  // is not meant to be programmatically interpretable.
+  string location = 3;
+
+  // If the tote happens to be scanned along the way to the buffer, this
+  // will be populated with the results.
+  ScanResult scan = 4;
+}
+
+// Request for a tote's content to be scanned.  Scanning only occurs in
+// a secure area and might require moving a tote to that position.
+message ScanToteContentsRequest {
+  // A unique identifier for this message.
+  string message_id = 1;
+
+  enum ToteSource {
+    TOTE_SOURCE_UNKNOWN = 0;
+    // The tote on the dock should be scanned.
+    DOCK = 1;
+    // The tote should be unloaded from the buffer (tote_id will be set below).
+    BUFFER = 2;
+    // There is expected to be a tote that is already scannable.
+    SCANNABLE = 3;
+  }
+
+  ToteSource tote_source = 2;
+
+  // Tote ID from the buffer to reserve.
+  string tote_id = 3;
+
+  enum ScanType {
+    SCAN_TYPE_UNKNOWN = 0;
+    // Scan the tote contents and the tote ID.
+    FULL_SCAN = 1;
+    // Scan only the tote barcode (not the contents).
+    TOTE_BARCODE_ONLY = 2;
+    // Scan nothing (only move the tote in position for scanning if required).
+    NOTHING = 3;
+  }
+  ScanType scan_type = 4;
+}
+
+message ScanToteContentsResult {
+  // A unique identifier for this message.
+  string message_id = 1;
+
+  ResultCode result_code = 2;
+
+  ScanResult scan = 3;
+}
+
+// Send a tote to the dock (end of the conveyor).
+message SendToDockRequest {
+  // A unique identifier for this message.
+  string message_id = 1;
+
+  // If the tote ID is set, the tote should be retrieved from the buffer
+  // and sent to the dock.  If it is not set (or empty), it is assumed there is
+  // a tote already on the conveyor ready to be sent.
+  string tote_id = 2;
+}
+
+// Result of SendToDockRequest.
+message SendToDockResult {
+  // A unique identifier for this message.
+  string message_id = 1;
+
+  // Result of SendToBuffer
+  ResultCode result_code = 2;
+
+  // If the tote happens to be scanned along the way to the dock, this
+  // will be populated with the results.
+  ScanResult scan = 3;
+}
+
+// Ask the Induct buffer to send a tote to a docked AGV.  The tote
+// must be at the dock.
+message EjectToteToAgvRequest {
+  // A unique identifier for this message.
+  string message_id = 1;
+}
+
+// The result of ReceiveFromRobot request.
+message EjectToteToAgvResult {
+  // The message id of the request that this is a result of.
+  string message_id = 1;
+
+  ResultCode result_code = 2;
+}
+
+
+// Get the current status of the system.
+message GetStatusRequest {
+  string message_id = 1;
+}
+
+message ZoneStatus {
+  ZonePresence tote_presence = 1;
+  google.protobuf.Timestamp last_change_time = 2;
+}
+
+// Result for GetStatusRequest.
+message GetStatusResult {
+  string message_id = 1;
+  // The latest event sent from the GIB as of
+  // this status request.
+  string last_event_id = 2;
+  // Current time on the hardware clock.
+  google.protobuf.Timestamp current_time = 3;
+
+  // Is an item is at the dock.
+  ZoneStatus dock_status = 4;
+  // There is an item that is scannable, that isn't at the dock.
+  ZoneStatus scannable_item = 5;
+
+  message InventoryItem {
+    string tote_id = 1;
+    string location_id = 2;
+  }
+  repeated InventoryItem buffer_inventory = 6;
+
+  message Command {
+    // The enum value of the case statement from InductBufferRequest
+    int32 command = 1;
+    string message_id = 2;
+  }
+
+  // The command the GIB is currently executing if any.
+  Command current_command = 7;
+
+  // The last command processed.
+  Command last_excuted_command_id = 8;
+}
+
+// All possible requests that can be made to the induct buffer.
+message InductBufferRequest {
+  oneof requests {
+    AcceptToteFromAgvRequest accept_from_agv = 1;
+    SendToBufferRequest send_to_buffer = 2;
+    ScanToteContentsRequest scan_contents = 3;
+    SendToDockRequest send_to_dock = 4;
+    EjectToteToAgvRequest send_to_agv = 5;
+    GetStatusRequest get_status = 6;
+  }
+}
+
+// All possible events/replies that the induct buffer can send out.
+message InductBufferEvent {
+  oneof event {
+    Identification id = 1;
+    DockEvent dock_event = 2;
+    AcceptToteFromAgvResult accept_from_agv_result = 10;
+    SendToBufferResult send_to_buffer_result = 11;
+    ScanToteContentsResult scan_contents_result = 12;
+    SendToDockResult send_to_dock_result = 13;
+    EjectToteToAgvResult send_to_agv_result = 14;
+    GetStatusResult get_status_result = 15;
+  }
+}

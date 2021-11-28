@@ -1,0 +1,71 @@
+                       TP Accounting
+
+F Number: 209693
+VERSION : HandlingTool         
+$VERSION: V9.1060      11/14/2017
+DATE:     28-NOV-18 12:06 
+
+Menu                         Elapsed Time         #Sel       #Keys
+                     (YY-MM-DD HH:MM:SS)
+Id:  962, 1                       04:42            2          15
+Home                              24:42           10         139
+Alarm Log                         03:08            5          42
+Version ID                     01:09:54            4          32
+S/W Install                          16            6          20
+Id:  381, 5                          50           17           0
+Id:  381, 26                         46            3          19
+DCS                            01:47:10           14         830
+Cell Intface                      01:02           20         200
+Digital                        01:35:08           13         705
+Position Display               18:37:16            8         495
+File                              26:34            7         495
+Hints                             27:30           26          34
+Clock                       21 23:43:56           20         133
+EtherNet/IP                    01:32:42           17         835
+SELECT                      01 23:26:48           67         961
+UOP                            01:24:00           42        1073
+Config                            25:52           17         855
+Registers                      15:25:50           11         190
+PMC                               14:30           19         579
+Id:  381, 2                       01:04            2          37
+Motion                               02            1          10
+EDIT                        07 06:28:20           79        6161
+BG Logic                             42            2           2
+Interconnect                         22            3          42
+Group                             04:48            2         456
+Robot                                36            2          22
+Flag                              04:20           12         659
+Analog                               28            2          87
+Custom                               12            3          21
+Prog Select                       21:04            5         152
+Auto Backup                          26            1          30
+PMC Display                          00            5           0
+SOP                                  38            1          68
+Link Device                          14            2          11
+Variables                         10:48            2         191
+4D Display                           16            1           8
+Host Comm                         01:02            3          12
+Position Reg                08 01:58:00           19        3807
+Frames                            37:38           10         592
+Tool1                                06            1           1
+USER                              06:36            1           2
+File Memory                          02            1           6
+EDIT                        09 02:41:18           16        2036
+Notifications                        14            1           4
+
+Full Menus:              01-19 20:18:30 
+Quick Menus:                      03:32 
+
+MENU Popup:                                       88
+[ TYPE ] Pullup:                                 103
+
+Functions at COLD start
+ABORT (ALL)                                       52
+RELEASE WAIT                                       5
+QUICK/FULL MENUS                                   1
+SAVE                                               1
+PRINT SCREEN                                       1
+CYCLE POWER                                        4
+
+Functions at CTRL start
+START (COLD)                                       2

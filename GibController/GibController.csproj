@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{177F84B6-9B05-45F7-BEBC-17277252A627}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GIBController</RootNamespace>
+    <AssemblyName>GIB Controller</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>false</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.21.13.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1ADA3D800CB8BBBB9B69EF15B113A03C0BEE140E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GibController_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\..\protobuf-net r668\Full\net30\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InductBufferCommands.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="KittingCell.cs" />
+    <Compile Include="TcpServer.cs" />
+    <Compile Include="BarcodeInterface.cs" />
+    <Compile Include="CognexInterface.cs" />
+    <Compile Include="Conveyor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crawler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GibZone.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EipPlc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VfxControl.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="3rdPartyBackups\Cognex\Archive\Dataman 01.dmb" />
+    <None Include="3rdPartyBackups\Cognex\Archive\Dataman 02.dmb" />
+    <None Include="3rdPartyBackups\Cognex\Archive\LST_Far01.job" />
+    <None Include="3rdPartyBackups\Cognex\Archive\LST_Far02.job" />
+    <None Include="3rdPartyBackups\Cognex\Archive\LST_Near01.job" />
+    <None Include="3rdPartyBackups\Cognex\Archive\LST_Near02.job" />
+    <None Include="3rdPartyBackups\Cognex\Archive\LWST_FarInsight.job" />
+    <None Include="3rdPartyBackups\Cognex\Archive\LWST_NearInsight.job" />
+    <None Include="3rdPartyBackups\Cognex\Archive\LWST_ToteReaderDataman.dmb" />
+    <None Include="3rdPartyBackups\Cognex\Archive\TCPbasic.job" />
+    <None Include="3rdPartyBackups\Cognex\VFX_Camera.job" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\-BCKED2-.TP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\-BCKED8-.TP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\-BCKED9-.TP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\-BCKEDT-.TP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\AAVMMAIN.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ATERRJOB.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\BACKDATE.DT" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\BG.TP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\BICSETUP.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\CELLIO.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\CHECK_SLOT.TP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\COMSET.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\CONSLOG.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DCSCHG01.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DCSCHG02.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DCSCHG03.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DCSDIFF.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DCSIOC.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DCSPOS.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DCSVRFY.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DF_LOGI1.DF" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DF_LOGI2.DF" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DF_LOGI3.DF" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DF_LOGI4.DF" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DF_LOGI5.DF" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DF_LOGI6.DF" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DF_MOTN0.DF" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DIOCFGSV.IO" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\DP_RES.DT" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\EIPLOG.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\EMAIL.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ERRACT.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ERRALL.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ERRAPP.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ERRCOMM.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ERRCURR.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ERREXT.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ERRHIST.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ERRMOT.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ERRPWD.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ERRSYS.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ETHERNET.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\FIND_BOX.TP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\FLEXEVENT.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\FRAMEVAR.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\FTPLOG.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\HAPTIC.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\HIST.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\HTCOLREC.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\HTTPKCL.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\IOSTATUS.CM" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\IPKDMP.ZIP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\IRC_COUNTER.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\IRC_MSG.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\IRC_STATUS.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\IRC_STLABEL.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\LOGBOOK.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\MEMCHECK.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\MIXLOGIC.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\MTC3.DT" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\NOTIFY.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\NUMREG.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ORDERFIL.DAT" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\PMCCFG.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\POSREG.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\PRSTAT.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\PSRBWLD.CM" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\RCMERR.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\RCMSGLIB.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SAFEZ.TP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SCAN_LABEL.TP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SCAN_SLOT.TP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SHADOW.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SMTPLOG.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\STORE_BOX7FRAME.TP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\STRREG.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SUMMARY.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SV_ADJST.TP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SWIAUTO.PC" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SWIAUTO.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SWIUPDT.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SYSCIPS.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SYSEIP.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SYSFRAME.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SYSFSAC.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SYSHOST.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SYSMACRO.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SYSMAST.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SYSPASS.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SYSSERVO.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SYSUIF.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\SYSVARS.SV" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\TPACCN.DG" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\TPSCRN.ZIP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\UPDATES.DAT" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\UPDATE_BOXFRAME.TP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\UPDTLOG.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\VCMRINIT.VR" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\VDEVDIAG.DAT" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\VIMGDIAG.ZIP" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\VTRNDIAG.LS" />
+    <None Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\ZDLOG.DG" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_01_Original.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_02_NoCognex.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_03_IPC_Task.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_04_No_IPC_Task.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_05_Slower_Internal_EIP.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_05_Slower_Internal_EIP.GOOGLE.nedlecky.BAK000.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_06_Zone1Fixes.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_07_NewInfeedLogic.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_07_NewInfeedLogic.GOOGLE.nedlecky.BAK000.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_07_NewInfeedLogic.GOOGLE.nedlecky.BAK001.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_08_NewInfeedLogic.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_08_NewInfeedLogic.GOOGLE.nedlecky.BAK003.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_08_NewInfeedLogic.GOOGLE.nedlecky.BAK004.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_08_NewInfeedLogic.GOOGLE.nedlecky.BAK005.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_09_MoreInfeedAndScanning.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_09_MoreInfeedAndScanning.GOOGLE.nedlecky.BAK000.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_09_MoreInfeedAndScanning.GOOGLE.nedlecky.BAK001.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_09_MoreInfeedAndScanning.GOOGLE.nedlecky.BAK002.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_10_AddedZSensors.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_11_AddedZSensors.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_11_AddedZSensors.GOOGLE.nedlecky.BAK000.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_11_AddedZSensors.GOOGLE.nedlecky.BAK001.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_11_AddedZSensors.GOOGLE.nedlecky.BAK002.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_12_Limiting_EIP.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_12_Limiting_EIP.GOOGLE.nedlecky.BAK000.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_12_Limiting_EIP.GOOGLE.nedlecky.BAK001.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_13_Limiting_EIP.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_13_Limiting_EIP.GOOGLE.nedlecky.BAK000.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_13_Limiting_EIP.GOOGLE.nedlecky.BAK001.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB1_14_EIP_OK_NewConveyor.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB_PLC_02.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB_PLC_03.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB_PLC_03.GOOGLE.nedlecky.BAK000.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB_PLC_03.GOOGLE.nedlecky.BAK001.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB_PLC_03.GOOGLE.nedlecky.BAK002.acd" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB_PLC_04.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\GIB_PLC_05.ACD" />
+    <None Include="3rdPartyBackups\PLC\Archive\VFX1.GOOGLE.nedlecky.BAK000.acd" />
+    <None Include="3rdPartyBackups\PLC\GIB_PLC.ACD" />
+    <None Include="3rdPartyBackups\PLC\VFX1.ACD" />
+    <None Include="GibController_TemporaryKey.pfx" />
+    <None Include="induct_buffer_commands.proto" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibplctagWrapper\LibplctagWrapper.csproj">
+      <Project>{394abfc2-e570-462e-9994-37b33c348702}</Project>
+      <Name>LibplctagWrapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\EIPCFG.XML" />
+    <Content Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\FLEXUIF.XML" />
+    <Content Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\RCMCFG.XML" />
+    <Content Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\TPEINS.XML" />
+    <Content Include="3rdPartyBackups\Fanuc\BKUP_28-NOV-18_12-04-58\VARCHG.XML" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,381 @@
+F Number: 209693
+VERSION : HandlingTool         
+$VERSION: V9.1060      11/14/2017
+DATE:     28-NOV-18 12:05 
+DCS Version: V4.2.0
+
+--- Tool frame -------------------------
+Group: 1                          Status
+Tool select:                     0   OK 
+(0:FacePlate,-1:Tool change)
+Current Tool:                    0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+    0  0    ---[  0:          ]      OK 
+         X:      0.0  W:      0.0
+         Y:      0.0  P:      0.0
+         Z:      0.0  R:      0.0
+
+--- User frame -------------------------
+Group: 1
+  No.     XYZ(mm)     WPR(deg)    Status
+    0   X:      0.0  W:      0.0     OK 
+        Y:      0.0  P:      0.0
+        Z:      0.0  R:      0.0
+    0   X:      0.0  W:      0.0     OK 
+        Y:      0.0  P:      0.0
+        Z:      0.0  R:      0.0
+    0   X:      0.0  W:      0.0     OK 
+        Y:      0.0  P:      0.0
+        Z:      0.0  R:      0.0
+    0   X:      0.0  W:      0.0     OK 
+        Y:      0.0  P:      0.0
+        Z:      0.0  R:      0.0
+    0   X:      0.0  W:      0.0     OK 
+        Y:      0.0  P:      0.0
+        Z:      0.0  R:      0.0
+    0   X:      0.0  W:      0.0     OK 
+        Y:      0.0  P:      0.0
+        Z:      0.0  R:      0.0
+    0   X:      0.0  W:      0.0     OK 
+        Y:      0.0  P:      0.0
+        Z:      0.0  R:      0.0
+    0   X:      0.0  W:      0.0     OK 
+        Y:      0.0  P:      0.0
+        Z:      0.0  R:      0.0
+    0   X:      0.0  W:      0.0     OK 
+        Y:      0.0  P:      0.0
+        Z:      0.0  R:      0.0
+
+--- Stop position prediction -----------
+Group: 1                          Status
+Cartesian
+  1 Mode:                   DISABLE  OK 
+  2 Expand Point as line:   DISABLE  OK 
+    Stop Category 0
+  3   Stopping distance (mm):   0.0  OK 
+  4   Speed (mm/sec):           0.0  OK 
+    Stop Category 1
+  5   Stopping distance (mm):   0.0  OK 
+  6   Speed (mm/sec):           0.0  OK 
+Joint J1
+  7 Mode:                   DISABLE  OK 
+    Stop Category 0
+  8   Stopping distance(deg):   0.0  OK 
+  9   Speed(deg/sec):           0.0  OK 
+    Stop Category 1
+ 10   Stopping distance(deg):   0.0  OK 
+ 11   Speed(deg/sec):           0.0  OK 
+Joint J2
+ 12 Mode:                   DISABLE  OK 
+    Stop Category 0
+ 13   Stopping distance(deg):   0.0  OK 
+ 14   Speed(deg/sec):           0.0  OK 
+    Stop Category 1
+ 15   Stopping distance(deg):   0.0  OK 
+ 16   Speed(deg/sec):           0.0  OK 
+Joint J3
+ 17 Mode:                   DISABLE  OK 
+    Stop Category 0
+ 18   Stopping distance(deg):   0.0  OK 
+ 19   Speed(deg/sec):           0.0  OK 
+    Stop Category 1
+ 20   Stopping distance(deg):   0.0  OK 
+ 21   Speed(deg/sec):           0.0  OK 
+Joint J4
+ 22 Mode:                   DISABLE  OK 
+    Stop Category 0
+ 23   Stopping distance(deg):   0.0  OK 
+ 24   Speed(deg/sec):           0.0  OK 
+    Stop Category 1
+ 25   Stopping distance(deg):   0.0  OK 
+ 26   Speed(deg/sec):           0.0  OK 
+Joint J5
+ 27 Mode:                   DISABLE  OK 
+    Stop Category 0
+ 28   Stopping distance(deg):   0.0  OK 
+ 29   Speed(deg/sec):           0.0  OK 
+    Stop Category 1
+ 30   Stopping distance(deg):   0.0  OK 
+ 31   Speed(deg/sec):           0.0  OK 
+Joint J6
+ 32 Mode:                   DISABLE  OK 
+    Stop Category 0
+ 33   Stopping distance(deg):   0.0  OK 
+ 34   Speed(deg/sec):           0.0  OK 
+    Stop Category 1
+ 35   Stopping distance(deg):   0.0  OK 
+ 36   Speed(deg/sec):           0.0  OK 
+Joint J7
+ 37 Mode:                   DISABLE  OK 
+    Stop Category 0
+ 38   Stopping distance(deg):   0.0  OK 
+ 39   Speed(deg/sec):           0.0  OK 
+    Stop Category 1
+ 40   Stopping distance(deg):   0.0  OK 
+ 41   Speed(deg/sec):           0.0  OK 
+Joint J8
+ 42 Mode:                   DISABLE  OK 
+    Stop Category 0
+ 43   Stopping distance(deg):   0.0  OK 
+ 44   Speed(deg/sec):           0.0  OK 
+    Stop Category 1
+ 45   Stopping distance(deg):   0.0  OK 
+ 46   Speed(deg/sec):           0.0  OK 
+Joint J9
+ 47 Mode:                   DISABLE  OK 
+    Stop Category 0
+ 48   Stopping distance(deg):   0.0  OK 
+ 49   Speed(deg/sec):           0.0  OK 
+    Stop Category 1
+ 50   Stopping distance(deg):   0.0  OK 
+ 51   Speed(deg/sec):           0.0  OK 
+
+--- Pos./speed check setup -------------
+                          Status: OK 
+ SSI[13] Configuration check
+  1 Disabled JPC DSBL Signal    DISABLE
+  2 Disabled JSC DSBL Signal    DISABLE
+  3 Disabled CPC DSBL Signal    DISABLE
+  4 Disabled CSC DSBL Signal    DISABLE
+  5 Invalid Tool Frame          DISABLE
+ Position/Speed check setup
+  6 Disabled CPC Position Check DISABLE
+  7 Shift+Reset direction check ENABLE 
+--- Robot setup ------------------------
+                                  Status
+Number of groups: 1                  OK 
+Scan time: 8 msec                    OK 
+---------- Group 1 ----------       
+Robot: M-10iA/12                     OK 
+Number of axes: 6                    OK 
+J1: Servo card - Axis 1              OK 
+J2: Servo card - Axis 2              OK 
+J3: Servo card - Axis 3              OK 
+J4: Servo card - Axis 4              OK 
+J5: Servo card - Axis 5              OK 
+J6: Servo card - Axis 6              OK 
+
+
+--- Mastering parameter ----------------
+    Axis  Position  Master count  Status
+---------- Group 1 ----------       
+J1     -87.584 deg       96068       OK 
+J2     -17.829 deg     8173258       OK 
+J3     -18.736 deg    13207191       OK 
+J4        .004 deg     -156254       OK 
+J5     -71.264 deg      314914       OK 
+J6     -92.476 deg     1868968       OK 
+
+--- CIP safety -------------------------
+    Status:                        OK    
+  1 Enable/Bypass:              ENABLE  
+  2 CIP Safety input size(byte):   2  
+  2 CIP Safety input size(byte):   2  
+  4 Config Signature Date/Time: ACTUAL  
+
+--- Safe I/O connect -------------------
+ Output     Input1         Input2 Status
+  SSO[  3]=  CSI[  1]      ---[  0] OK 
+  CSO[  1]=  SSI[  7]      ---[  0] OK 
+  CSO[  2]=  SSI[  6]      ---[  0] OK 
+  SSO[  2]=  CSI[  2]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+  ---[  0]=  ---[  0]      ---[  0] OK 
+
+--- I/O Link i Slave--------------------
+                                  Status
+Input size (byte):           0      OK 
+Output size (byte):          0      OK 
+
+--- Safe I/O Consistency Check ---------
+No. Signal 1   Singal 2  Time(ms) Status
+ 1  ---[  0]    ---[  0]    1000    OK 
+ 2  ---[  0]    ---[  0]    1000    OK 
+ 3  ---[  0]    ---[  0]    1000    OK 
+ 4  ---[  0]    ---[  0]    1000    OK 
+ 5  ---[  0]    ---[  0]    1000    OK 
+ 6  ---[  0]    ---[  0]    1000    OK 
+ 7  ---[  0]    ---[  0]    1000    OK 
+ 8  ---[  0]    ---[  0]    1000    OK 
+ 9  ---[  0]    ---[  0]    1000    OK 
+10  ---[  0]    ---[  0]    1000    OK 
+11  ---[  0]    ---[  0]    1000    OK 
+12  ---[  0]    ---[  0]    1000    OK 
+13  ---[  0]    ---[  0]    1000    OK 
+14  ---[  0]    ---[  0]    1000    OK 
+15  ---[  0]    ---[  0]    1000    OK 
+16  ---[  0]    ---[  0]    1000    OK 
+
+--- Safe I/O device --------------------
+  1 Safe I/O process: I/O connect   OK 
+  2 SFDO Pulse check: DISABLE(PL d) OK 
+ Configuration                    status
+   ---- Device 1 -------------
+  3 Type:E-stop board              OK 
+  4 Robot number: 1                 OK 
+  5 Input:  SPI[  1 -   8](PL e)    OK 
+  6 Output: SPO[  1 -   8](PL d)    OK 
+   ---- Device 2 -------------
+  7 Type:No device                 OK 
+  8 Robot number: 0                 OK 
+  9 Input:  SPI[  0 -   0](PL e)    OK 
+ 10 Output: SPO[  0 -   0](PL d)    OK 
+   ---- Device 3 -------------
+ 11 Type:No device                 OK 
+ 12 Robot number: 0                 OK 
+ 13 Input:  SPI[  0 -   0](PL e)    OK 
+ 14 Output: SPO[  0 -   0](PL d)    OK 
+   ---- Device 4 -------------
+ 15 Type:No device                 OK 
+ 16 Robot number: 0                 OK 
+ 17 Input:  SPI[  0 -   0](PL e)    OK 
+ 18 Output: SPO[  0 -   0](PL d)    OK 
+   ---- Device 5 -------------
+ 19 Type:No device                 OK 
+ 20 Robot number: 0                 OK 
+ 21 Input:  SPI[  0 -   0](PL e)    OK 
+ 22 Output: SPO[  0 -   0](PL d)    OK 
+   ---- Device 6 -------------
+ 23 Type:No device                 OK 
+ 24 Robot number: 0                 OK 
+ 25 Input:  SPI[  0 -   0](PL e)    OK 
+ 26 Output: SPO[  0 -   0](PL d)    OK 
+   ---- Device 7 -------------
+ 27 Type:No device                 OK 
+ 28 Robot number: 0                 OK 
+ 29 Input:  SPI[  0 -   0](PL e)    OK 
+ 30 Output: SPO[  0 -   0](PL d)    OK 
+   ---- Device 8 -------------
+ 31 Type:No device                 OK 
+ 32 Robot number: 0                 OK 
+ 33 Input:  SPI[  0 -   0](PL e)    OK 
+ 34 Output: SPO[  0 -   0](PL d)    OK 
+
+--- Signature number (Dec) -------------
+                Current        Latch
+1 Total:         857896758            0
+  Time:28-FEB-18 07:54              None
+2 Base:         1910472944            0
+  Time:28-FEB-18 07:54              None
+3 Pos./Speed:    928735811            0
+  Time:02-AUG-18 08:49              None
+4 I/O connect:  -108955847            0
+  Time:01-NOV-18 09:57              None
+

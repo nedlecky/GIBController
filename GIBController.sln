@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GibController", "gibcontroller\GibController.csproj", "{177F84B6-9B05-45F7-BEBC-17277252A627}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0AABD7BC-7F11-4754-8111-8BD23D9517D0} = {0AABD7BC-7F11-4754-8111-8BD23D9517D0}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibplctagWrapper", "libplctagwrapper\LibplctagWrapper.csproj", "{394ABFC2-E570-462E-9994-37B33C348702}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceTester", "interfacetester\InterfaceTester.csproj", "{0AABD7BC-7F11-4754-8111-8BD23D9517D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{177F84B6-9B05-45F7-BEBC-17277252A627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{177F84B6-9B05-45F7-BEBC-17277252A627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{177F84B6-9B05-45F7-BEBC-17277252A627}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{177F84B6-9B05-45F7-BEBC-17277252A627}.Debug|x64.Build.0 = Debug|Any CPU
+		{177F84B6-9B05-45F7-BEBC-17277252A627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{177F84B6-9B05-45F7-BEBC-17277252A627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{177F84B6-9B05-45F7-BEBC-17277252A627}.Release|x64.ActiveCfg = Release|Any CPU
+		{177F84B6-9B05-45F7-BEBC-17277252A627}.Release|x64.Build.0 = Release|Any CPU
+		{394ABFC2-E570-462E-9994-37B33C348702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{394ABFC2-E570-462E-9994-37B33C348702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{394ABFC2-E570-462E-9994-37B33C348702}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{394ABFC2-E570-462E-9994-37B33C348702}.Debug|x64.Build.0 = Debug|Any CPU
+		{394ABFC2-E570-462E-9994-37B33C348702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{394ABFC2-E570-462E-9994-37B33C348702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{394ABFC2-E570-462E-9994-37B33C348702}.Release|x64.ActiveCfg = Release|Any CPU
+		{394ABFC2-E570-462E-9994-37B33C348702}.Release|x64.Build.0 = Release|Any CPU
+		{0AABD7BC-7F11-4754-8111-8BD23D9517D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AABD7BC-7F11-4754-8111-8BD23D9517D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AABD7BC-7F11-4754-8111-8BD23D9517D0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0AABD7BC-7F11-4754-8111-8BD23D9517D0}.Debug|x64.Build.0 = Debug|Any CPU
+		{0AABD7BC-7F11-4754-8111-8BD23D9517D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AABD7BC-7F11-4754-8111-8BD23D9517D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AABD7BC-7F11-4754-8111-8BD23D9517D0}.Release|x64.ActiveCfg = Release|Any CPU
+		{0AABD7BC-7F11-4754-8111-8BD23D9517D0}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {196371D2-1595-4BC4-90B6-65F5947E3BED}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,169 @@
+4 : [CPINIT] Conn Serial_No[17]: 0xdae0
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[18]: 0xfe06
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[19]: 0x212c
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[20]: 0x4452
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[21]: 0x6778
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[22]: 0x8a9e
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[23]: 0xadc4
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[24]: 0xd0ea
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[25]: 0xf410
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[26]: 0x1736
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[27]: 0x3a5c
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[28]: 0x5d82
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[29]: 0x80a8
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[30]: 0xa3ce
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[31]: 0x2023
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[32]: 0x4349
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[33]: 0x666f
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[34]: 0x8995
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[35]: 0xacbb
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[36]: 0xcfe1
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[37]: 0xf307
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[38]: 0x162d
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[39]: 0x3953
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[40]: 0x5c79
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[41]: 0x7f9f
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[42]: 0xa2c5
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[43]: 0xc5eb
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[44]: 0xe911
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[45]: 0xc37
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[46]: 0x2f5d
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[47]: 0x5283
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[48]: 0x75a9
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[49]: 0x98cf
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[50]: 0xbbf5
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[51]: 0xdf1b
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[52]: 0x241
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[53]: 0x2567
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[54]: 0x488d
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[55]: 0x6bb3
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[56]: 0x8ed9
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[57]: 0xb1ff
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[58]: 0xd525
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[59]: 0xf84b
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[60]: 0x1b71
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[61]: 0x3e97
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[62]: 0x61bd
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[63]: 0x84e3
+
+NOV 20 2018 14:35:44 : [CPINIT] Conn Serial_No[64]: 0x5d4d
+
+NOV 20 2018 14:36:00 : index 0, ADP, I/O o:16 i:16, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 1, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 2, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 3, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 4, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 5, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 6, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 7, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 8, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 9, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 10, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 11, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 12, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 13, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 14, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 15, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 16, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 17, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 18, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 19, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 20, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 21, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 22, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 23, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 24, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 25, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 26, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 27, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 28, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 29, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 30, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 31, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 32, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 33, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 34, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 35, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 36, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 37, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 38, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 39, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 40, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 41, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 42, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 43, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 44, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 45, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 46, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 47, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 48, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 49, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 50, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 51, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 52, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 53, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 54, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 55, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 56, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 57, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 58, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 59, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 60, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 61, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 62, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : index 63, ADP, I/O o:0 i:0, rpi ot:0 to:0, cco_id 0
+NOV 20 2018 14:36:00 : CPMSG_P->options = 0x0
+NOV 20 2018 14:36:00 : CPMSG_P->state = CIP_OK
+NOV 20 2018 14:36:42 : Register Session Received
+NOV 20 2018 14:36:42 : Recieve FwdOpen 0
+NOV 20 2018 14:36:42 : Adp 0 creq valid
+NOV 20 2018 14:36:42 : Adp0 EO ConnID  to: 0xb40c203 ot: 0x5d964d7d
+NOV 20 2018 14:36:42 : Adp0 API  to: 32 ot: 32
+NOV 20 2018 14:36:42 : Recieve FwdOpen 0
+NOV 20 2018 14:36:42 : Recieve FwdOpen 0

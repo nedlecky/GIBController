@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<EIPCFG>
+  <COMMON>
+    <SOFTWARE name="RSLogix5000" rev="1.0" ver="31.00"/>
+    <CONN name="FANUC" mode="2" />
+    <RUNGS yes="1"/>
+  </COMMON>
+  <IMPLICIT>
+    <SLOT conn="FANUC" num="1" name="EDA">
+      <INPUT name="I">
+        <REG type="NUMERIC" start="1" total="24" real="0"/>
+        <REG type="POSITION" start="1" total="4" jpos="0" group="1"/>
+      </INPUT>
+      <OUTPUT name="O">
+        <REG type="NUMERIC" start="1" total="32" real="0"/>
+        <REG type="POSITION" start="1" total="6" jpos="0" group="1"/>
+        <REG type="CURPOS" jpos="0" group="1"/>
+      </OUTPUT>
+    </SLOT>
+  </IMPLICIT>
+</EIPCFG>
